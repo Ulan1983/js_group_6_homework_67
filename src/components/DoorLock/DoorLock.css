@@ -1,0 +1,30 @@
+.door_lock {
+	margin: 50px auto;
+	text-align: center;
+	width: 240px;
+}
+
+.door_lock input {
+	width: 236px;
+	height: 60px;
+	text-align: center;
+	outline: none;
+	text-transform: uppercase;
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}
+
+.door_lock button {
+	width: 80px;
+	height: 80px;
+	font-size: 20px;
+}
