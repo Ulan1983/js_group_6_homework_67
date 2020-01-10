@@ -7,9 +7,9 @@ const initialState = {
 const correctCode = '1234';
 
 const reducer = (state = initialState, action) => {
-	switch(action.type) {
+	switch (action.type) {
 		case 'ADD':
-			const newState = {...state};
+			const newState = { ...state };
 			if (!state.string.includes('*') && state.string !== '') {
 				newState.string = '*';
 				newState.resultColor = '';
@@ -19,16 +19,16 @@ const reducer = (state = initialState, action) => {
 			if (state.code.length === 4) {
 				return newState;
 			}
-			return {...state, code: state.code + action.number, string: state.string + '*'};
+			return { ...state, code: state.code + action.number, string: state.string + '*' };
 
 		case 'REMOVE':
-			return {...state, string: state.string.slice(0, -1), code: state.code.slice(0, -1)};
+			return { ...state, string: state.string.slice(0, -1), code: state.code.slice(0, -1) };
 
 		case 'ENTER':
 			if (state.code === correctCode) {
-				return {...state, resultColor: 'green', string: 'Access granted!'};
+				return { ...state, resultColor: 'green', string: 'Access granted!' };
 			} else {
-				return {...state, resultColor: 'red', string: 'Invalid code!'}
+				return { ...state, resultColor: 'red', string: 'Invalid code!' }
 			}
 		default:
 			return state;
